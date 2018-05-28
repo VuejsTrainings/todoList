@@ -21,7 +21,7 @@ const ToDos = [
         description:'Sur le site Web des impôts',
         importance:3,
         echeance:'2018-05-29',
-        finie: false
+        finie: true
     },
     {
         id:4,

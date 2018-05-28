@@ -4,6 +4,7 @@ const ToDosListComponent = {
         <table class="table table-striped table-hover">
             <thead>
              <tr>
+                <th>&nbsp;</th>
                 <th>Titre</th>
                 <th>Description</th>
                 <th>Importance</th>
