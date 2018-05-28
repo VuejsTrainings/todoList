@@ -1,7 +1,5 @@
 const ToDosListComponent = {
-    props:{
-        todos:[],
-    },
+    props:['todos'],
     template:`
         <table class="table table-striped table-hover">
             <thead>
@@ -13,9 +11,11 @@ const ToDosListComponent = {
              </tr>
             </thead>
             <tbody>
-                <tr>
-                </tr>
+                <todo-item :todo="todo" v-for="todo in todos"></todo-item>
             </tbody>
         </table>
-    `
+    `,
+    components:{
+        'todo-item': ToDoComponent
+    }
 }
