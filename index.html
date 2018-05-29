@@ -16,6 +16,8 @@
                 <i class="fas fa-user-edit text-primary fa-xs" ></i>
             </h1>
             <todo-list></todo-list>
+            <user-form :nom="user" @user-changed=" user = $event "></user-form>
+            
         </div>
 
         <script src="https://unpkg.com/vue"></script>

@@ -13,7 +13,8 @@ new Vue({
         user: 'eric'
     },
     components:{
-        'todo-list': ToDosListComponent
+        'todo-list': ToDosListComponent,
+        'user-form': UserFormComponent
     },
     filters:{
         
