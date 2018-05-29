@@ -6,7 +6,7 @@ const UserFormComponent = {
         }
     },
     template:`
-        <div class="fade show opacifieur" role="dialog">
+        <div class="opacifieur" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
