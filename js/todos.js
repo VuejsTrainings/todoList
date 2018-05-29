@@ -38,5 +38,21 @@ const ToDos = [
         importance:2,
         echeance:'2018-05-30',
         finie: false
+    },
+    {
+        id:6,
+        titre:'Commander du café',
+        description:'En grande quantité!!!',
+        importance:1,
+        echeance:'',
+        finie: false
+    },
+    {
+        id:7,
+        titre:'Corriger ma date',
+        description:'',
+        importance:1,
+        echeance:'28 de mayo 1958',
+        finie: false
     }
 ];

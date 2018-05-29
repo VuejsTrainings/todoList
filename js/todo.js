@@ -17,12 +17,18 @@ const ToDoComponent = {
                     'fa-arrow-circle-down text-success': todo.importance == 1
                 }"></i>
             </td>
-            <td>{{ todo.echeance }}</td>
+            <td>{{ todo.echeance | date }}</td>
         </tr>
     `,
     methods:{
         changeEtat(todo){
             todo.finie = !todo.finie;
+        }
+    },
+    filters:{
+        date(val){
+            let oDate = new Date(val);
+            return isNaN(oDate.getFullYear()) ? '' : oDate.toLocaleDateString();
         }
     }
 }
