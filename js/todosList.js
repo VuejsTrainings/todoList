@@ -26,6 +26,12 @@ const ToDosListComponent = {
         'todo-item': ToDoComponent
     },
     methods:{
+        /**
+         * Trie les Todos selon le champ field
+         * par ordre croissant ou décroissant selon que le 
+         * champ soit déjà celui sur lequel on a trié ou non.
+         * @param {String} field 
+         */
         sortTodos(field){
             this.todos.sort( (a,b) => {
                 if( field === this.sortedField ) {
