@@ -13,10 +13,10 @@
             <h1>
                 <i class="fa fa-clipboard-list text-warning"></i> 
                 {{ user | toUpper }}'s todos list
-                <i class="fas fa-user-edit text-primary fa-xs" ></i>
+                <i class="fas fa-user-edit text-primary fa-xs" @click="editing = true"></i>
             </h1>
             <todo-list></todo-list>
-            <user-form :nom="user" @user-changed=" user = $event "></user-form>
+            <user-form :nom="user" @user-changed="user=$event" v-show="editing" @closed="editing = false"></user-form>
             
         </div>
 

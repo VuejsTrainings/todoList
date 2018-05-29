@@ -10,7 +10,8 @@ Vue.filter('toUpper',
 new Vue({
     el:'#app',
     data:  {
-        user: 'eric'
+        user: 'eric',
+        editing : false,
     },
     components:{
         'todo-list': ToDosListComponent,
