@@ -17,7 +17,7 @@ const ToDoComponent = {
                     'fa-arrow-circle-down text-success': todo.importance == 1
                 }"></i>
             </td>
-            <td>{{ todo.echeance | date }}</td>
+            <td>{{ todo.echeance | date | toUpper }}</td>
         </tr>
     `,
     methods:{
@@ -28,7 +28,8 @@ const ToDoComponent = {
     filters:{
         date(val){
             let oDate = new Date(val);
-            return isNaN(oDate.getFullYear()) ? '' : oDate.toLocaleDateString();
+            return oDate.toLocaleDateString();
+            // return isNaN(oDate.getFullYear()) ? '' : oDate.toLocaleDateString();
         }
     }
 }

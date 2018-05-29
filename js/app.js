@@ -1,3 +1,12 @@
+
+Vue.filter('toUpper',
+    /**
+    * Convertit en majuscules
+    * @param {String} val 
+    */
+    (val) => val.toUpperCase()
+);
+
 new Vue({
     el:'#app',
     data:  {
@@ -7,12 +16,6 @@ new Vue({
         'todo-list': ToDosListComponent
     },
     filters:{
-        /**
-         * Convertit en majuscules
-         * @param {String} val 
-         */
-        toUpper(val){
-            return val.toUpperCase();
-        }
+        
     }
 })
