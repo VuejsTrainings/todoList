@@ -33,13 +33,10 @@ const ToDosListComponent = {
          * @param {String} field 
          */
         sortTodos(field){
-            this.todos.sort( (a,b) => {
-                if( field === this.sortedField ) {
-                    return a[field] < b[field];
-                } else {
-                    return b[field] < a[field];
-                }
-            });
+            this.todos.sort( (a,b) => field === this.sortedField  ?
+                                            a[field] < b[field]:
+                                            b[field] < a[field]
+            );
             this.sortedField = (field === this.sortedField) ? "" : field ;
         }
     }
