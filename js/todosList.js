@@ -1,22 +1,40 @@
 const ToDosListComponent = {
     props:['todos'],
+    data(){
+        return {
+            sortedField:''
+        };
+    }
+    ,
     template:`
         <table class="table table-striped table-hover">
             <thead>
              <tr>
                 <th>&nbsp;</th>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Importance</th>
-                <th>Pour le</th>
+                <th @click="sortTodos('titre')" style="cursor:pointer">Titre</th>
+                <th @click="sortTodos('description')">Description</th>
+                <th @click="sortTodos('importance')">Importance</th>
+                <th @click="sortTodos('echeance')">Pour le</th>
              </tr>
             </thead>
             <tbody>
-                <todo-item :todo="todo" v-for="todo in todos"></todo-item>
+                <todo-item :todo="todo" v-for="todo in todos" :key="todo.id"></todo-item>
             </tbody>
         </table>
     `,
     components:{
         'todo-item': ToDoComponent
+    },
+    methods:{
+        sortTodos(field){
+            this.todos.sort( (a,b) => {
+                if( field === this.sortedField ) {
+                    return a[field] < b[field];
+                } else {
+                    return b[field] < a[field];
+                }
+            });
+            this.sortedField = (field === this.sortedField) ? "" : field ;
+        }
     }
 }
