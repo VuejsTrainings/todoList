@@ -1,7 +1,7 @@
 const ToDosListComponent = {
-    props:['todos'],
     data(){
         return {
+            todos: ToDos,
             sortedField:''
         };
     }
